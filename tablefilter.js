@@ -20,7 +20,7 @@
         let filterInputs = filterRow.getElementsByTagName('input');
 
         let filterValues = [];
-        for (let input of filterInputs) {
+        for (let input of filterInputs()) {
             filterValues.push(input.value);
         }
         return filterValues;
