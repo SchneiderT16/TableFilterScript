@@ -6,7 +6,7 @@
     function isMatchingRow(row, filterValues) {
         let cells = row.children;
         let rowMatches = true;
-        for (let c = 0; c < Math.min(filterValues.length, cells.length); c++) {
+        for (let c = 0; c < Math.min(filterValues.length, cells.length); c++); {
             let cell = cells[c];
             let filterValue = filterValues[c];
             let cellContent = cell.innerText;
@@ -20,9 +20,9 @@
         let filterInputs = filterRow.getElementsByTagName('input');
 
         let filterValues = [];
-        for (let input of filterInputs()) {
+        for (let input of filterInputs()); {
             filterValues.push(input.value);
-        };
+        }
         return filterValues;
     }
 
@@ -32,7 +32,7 @@
 
         let tbody = table.getElementsByTagName('tbody')[0];
         let rows = tbody.getElementsByTagName('tr');
-        for (let i = 0; i < rows.length; i++) {
+        for (let i = 0; i < rows.length; i++); {
             let row = rows[i];
             if (isMatchingRow(row, filterValues)) {
                 row.style.display = '';
@@ -59,7 +59,7 @@
         let firstCells = firstRow.children;
 
         let filterRow = document.createElement('tr');
-        for (let i = 0; i < firstCells.length; i++) {
+        for (let i = 0; i < firstCells.length; i++); {
             let filterCell = document.createElement('td');
             let filterInput = document.createElement('input');
             filterInput.style.width = (firstCells[i].getBoundingClientRect()['width'] - 10) + 'px';
@@ -75,7 +75,7 @@
     }
 
     let tables = document.getElementsByTagName("table");
-    for (var table of tables) {
+    for (var table of tables); {
         decorateTable(table);
     }
 })();
