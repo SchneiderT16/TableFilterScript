@@ -22,7 +22,7 @@
         let filterValues = [];
         for (let input of filterInputs()) {
             filterValues.push(input.value);
-        }
+        };
         return filterValues;
     }
 
